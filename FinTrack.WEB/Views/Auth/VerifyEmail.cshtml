@@ -1,0 +1,33 @@
+﻿@model FinTrack.Application.Common.Models.EmailBodyVM
+<tr>
+    <td align="center">
+        <span style="color:#48545d;font-size:14px;line-height:24px">
+            Your email was used to create a new account in www.FinTrack.com. To complete the registration process click on button below.
+        </span>
+    </td>
+</tr>
+<tr>
+    <td height="20"></td>
+</tr>
+<tr>
+    <td width="48%" valign="top" align="center">
+        <span>
+            <a href="@Model.CallBackUrl" style="display:block;padding:15px 25px;background-color:#47bb70;color:#ffffff;border-radius:3px;text-decoration:none" target="_blank">Confirm</a>
+        </span>
+        <br /><br />
+        <span>
+            If you are having trouble clicking the confirmed button, copy and paste the URL below into your web browser
+            @Model.CallBackUrl
+        </span>
+    </td>
+</tr>
+<tr>
+    <td height="20"></td>
+</tr>
+<tr>
+    <td align="center">
+        <p style="color:#a2a2a2;font-size:12px;line-height:17px;font-style:italic">
+            Or enter the following code in account verification page = <b>@Model.EmailConfirmationToken</b>
+        </p>
+    </td>
+</tr>
